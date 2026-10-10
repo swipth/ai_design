@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1040" role="img">
+  <title>AI 应用架构决策树</title>
+  <desc>从业务目标出发，按问题选择 Workflow、RAG、Memory、Agent、Multi-Agent 与 Runtime。</desc>
+  <rect width="100%" height="100%" fill="#F6F8FB"/>
+<text x="720" y="42" text-anchor="middle" font-size="26" font-weight="700" fill="#12355B" font-family="PingFang SC, Microsoft YaHei, sans-serif">AI 应用架构决策树</text>
+<text x="720" y="70" text-anchor="middle" font-size="14" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">从业务目标出发，按需选择技术路径，而不是默认上多智能体</text>
+<rect x="20" y="96" width="250" height="760" rx="14" fill="#F8FAFC" stroke="#E4E7EC"/>
+<text x="145" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#12355B" font-family="PingFang SC, Microsoft YaHei, sans-serif">决策维度</text>
+<text x="40" y="176" font-size="14" font-weight="700" fill="#175CD3" font-family="PingFang SC, Microsoft YaHei, sans-serif">1 任务特征</text>
+<text x="40" y="198" font-size="12" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">步骤是否固定、可审计</text>
+<text x="40" y="248" font-size="14" font-weight="700" fill="#0E9384" font-family="PingFang SC, Microsoft YaHei, sans-serif">2 知识需求</text>
+<text x="40" y="270" font-size="12" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">是否依赖企业或外部知识</text>
+<text x="40" y="320" font-size="14" font-weight="700" fill="#B54708" font-family="PingFang SC, Microsoft YaHei, sans-serif">3 记忆需求</text>
+<text x="40" y="342" font-size="12" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">是否跨会话保留信息</text>
+<text x="40" y="392" font-size="14" font-weight="700" fill="#087443" font-family="PingFang SC, Microsoft YaHei, sans-serif">4 决策自由度</text>
+<text x="40" y="414" font-size="12" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">是否要多步规划与工具</text>
+<text x="40" y="464" font-size="14" font-weight="700" fill="#6927DA" font-family="PingFang SC, Microsoft YaHei, sans-serif">5 协作需求</text>
+<text x="40" y="486" font-size="12" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">是否多个角色独立协作</text>
+<text x="40" y="536" font-size="14" font-weight="700" fill="#1849A9" font-family="PingFang SC, Microsoft YaHei, sans-serif">6 运行要求</text>
+<text x="40" y="558" font-size="12" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">是否稳定、定时、可观测</text>
+<text x="40" y="640" font-size="12" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">判断顺序自上而下。</text>
+<text x="40" y="662" font-size="12" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">能用流程解决的，</text>
+<text x="40" y="684" font-size="12" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">不要升级成 Agent。</text>
+<text x="40" y="720" font-size="12" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">多项为“是”时叠加能力，</text>
+<text x="40" y="742" font-size="12" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">而不是互相替换。</text>
+<rect x="400" y="104" width="280" height="44" rx="22" fill="#12355B"/>
+<text x="540" y="132" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF" font-family="PingFang SC, Microsoft YaHei, sans-serif">业务目标</text>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1.2 L8 5 L0 8.8 Z" fill="#98A2B3"/></marker></defs>
+<line x1="540" y1="148" x2="540" y2="176" stroke="#98A2B3" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="360" y="176" width="360" height="72" rx="12" fill="#EEF4FF" stroke="#B2CCFF"/>
+<text x="540" y="206" text-anchor="middle" font-size="14" font-weight="700" fill="#1849A9" font-family="PingFang SC, Microsoft YaHei, sans-serif">流程是否固定、可审计？</text>
+<text x="540" y="230" text-anchor="middle" font-size="12" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">是 → 右侧；否 → 继续向下</text>
+<rect x="760" y="176" width="250" height="72" rx="12" fill="#EEF4FF" stroke="#B2CCFF"/>
+<text x="885" y="206" text-anchor="middle" font-size="14" font-weight="700" fill="#1849A9" font-family="PingFang SC, Microsoft YaHei, sans-serif">选择 Workflow</text>
+<text x="885" y="230" text-anchor="middle" font-size="12" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">固定流程 / 审批 / 规则</text>
+<line x1="720" y1="212" x2="756" y2="212" stroke="#98A2B3" stroke-width="1.5" marker-end="url(#ah)"/>
+<text x="726" y="204" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">是</text>
+<line x1="540" y1="248" x2="540" y2="272" stroke="#98A2B3" stroke-width="1.5" marker-end="url(#ah)"/>
+<text x="548" y="264" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">否</text>
+<rect x="360" y="272" width="360" height="72" rx="12" fill="#E6F7F4" stroke="#99E3D6"/>
+<text x="540" y="302" text-anchor="middle" font-size="14" font-weight="700" fill="#0E7090" font-family="PingFang SC, Microsoft YaHei, sans-serif">核心问题是否依赖外部知识？</text>
+<text x="540" y="326" text-anchor="middle" font-size="12" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">制度、文档、业务数据、事实</text>
+<rect x="760" y="272" width="250" height="72" rx="12" fill="#E6F7F4" stroke="#99E3D6"/>
+<text x="885" y="302" text-anchor="middle" font-size="14" font-weight="700" fill="#0E7090" font-family="PingFang SC, Microsoft YaHei, sans-serif">选择 RAG</text>
+<text x="885" y="326" text-anchor="middle" font-size="12" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">检索增强 / 引用返回</text>
+<line x1="720" y1="308" x2="756" y2="308" stroke="#98A2B3" stroke-width="1.5" marker-end="url(#ah)"/>
+<text x="726" y="300" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">是</text>
+<line x1="540" y1="344" x2="540" y2="368" stroke="#98A2B3" stroke-width="1.5" marker-end="url(#ah)"/>
+<text x="548" y="360" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">否</text>
+<rect x="360" y="368" width="360" height="72" rx="12" fill="#FFF6E8" stroke="#F9DBAF"/>
+<text x="540" y="398" text-anchor="middle" font-size="14" font-weight="700" fill="#B54708" font-family="PingFang SC, Microsoft YaHei, sans-serif">是否需要跨会话保留信息？</text>
+<text x="540" y="422" text-anchor="middle" font-size="12" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">偏好、进度、实体、长期事项</text>
+<rect x="760" y="368" width="250" height="72" rx="12" fill="#FFF6E8" stroke="#F9DBAF"/>
+<text x="885" y="398" text-anchor="middle" font-size="14" font-weight="700" fill="#B54708" font-family="PingFang SC, Microsoft YaHei, sans-serif">选择 Memory</text>
+<text x="885" y="422" text-anchor="middle" font-size="12" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">短期 / 长期 / 可删除</text>
+<line x1="720" y1="404" x2="756" y2="404" stroke="#98A2B3" stroke-width="1.5" marker-end="url(#ah)"/>
+<text x="726" y="396" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">是</text>
+<line x1="540" y1="440" x2="540" y2="464" stroke="#98A2B3" stroke-width="1.5" marker-end="url(#ah)"/>
+<text x="548" y="456" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">否</text>
+<rect x="360" y="464" width="360" height="72" rx="12" fill="#E8F7EF" stroke="#ABEFC6"/>
+<text x="540" y="494" text-anchor="middle" font-size="14" font-weight="700" fill="#087443" font-family="PingFang SC, Microsoft YaHei, sans-serif">是否需要多步规划与工具？</text>
+<text x="540" y="518" text-anchor="middle" font-size="12" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">路径不固定，但目标明确</text>
+<rect x="760" y="464" width="250" height="72" rx="12" fill="#E8F7EF" stroke="#ABEFC6"/>
+<text x="885" y="494" text-anchor="middle" font-size="14" font-weight="700" fill="#087443" font-family="PingFang SC, Microsoft YaHei, sans-serif">选择 Agent</text>
+<text x="885" y="518" text-anchor="middle" font-size="12" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">规划 · 工具 · 反思 · 停止</text>
+<line x1="720" y1="500" x2="756" y2="500" stroke="#98A2B3" stroke-width="1.5" marker-end="url(#ah)"/>
+<text x="726" y="492" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">是</text>
+<line x1="540" y1="536" x2="540" y2="560" stroke="#98A2B3" stroke-width="1.5" marker-end="url(#ah)"/>
+<text x="548" y="552" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">否</text>
+<rect x="360" y="560" width="360" height="72" rx="12" fill="#F4F0FF" stroke="#D9D0FF"/>
+<text x="540" y="590" text-anchor="middle" font-size="14" font-weight="700" fill="#5925DC" font-family="PingFang SC, Microsoft YaHei, sans-serif">是否多个角色独立协作？</text>
+<text x="540" y="614" text-anchor="middle" font-size="12" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">分工、交接、冲突需要仲裁</text>
+<rect x="760" y="560" width="250" height="72" rx="12" fill="#F4F0FF" stroke="#D9D0FF"/>
+<text x="885" y="590" text-anchor="middle" font-size="14" font-weight="700" fill="#5925DC" font-family="PingFang SC, Microsoft YaHei, sans-serif">选择 Multi-Agent</text>
+<text x="885" y="614" text-anchor="middle" font-size="12" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">角色分工 / 协同协议</text>
+<line x1="720" y1="596" x2="756" y2="596" stroke="#98A2B3" stroke-width="1.5" marker-end="url(#ah)"/>
+<text x="726" y="588" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">是</text>
+<line x1="540" y1="632" x2="540" y2="656" stroke="#98A2B3" stroke-width="1.5" marker-end="url(#ah)"/>
+<text x="548" y="648" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">否</text>
+<rect x="360" y="656" width="360" height="72" rx="12" fill="#EAF1FF" stroke="#B2CCFF"/>
+<text x="540" y="686" text-anchor="middle" font-size="14" font-weight="700" fill="#1849A9" font-family="PingFang SC, Microsoft YaHei, sans-serif">是否需要稳定可观测的运行？</text>
+<text x="540" y="710" text-anchor="middle" font-size="12" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">定时、重试、排队、人工接管</text>
+<rect x="760" y="656" width="250" height="72" rx="12" fill="#12355B"/>
+<text x="885" y="686" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF" font-family="PingFang SC, Microsoft YaHei, sans-serif">构建应用 Runtime</text>
+<text x="885" y="710" text-anchor="middle" font-size="12" fill="#D6E4F5" font-family="PingFang SC, Microsoft YaHei, sans-serif">状态 · 队列 · 观测 · 停止</text>
+<line x1="720" y1="692" x2="756" y2="692" stroke="#98A2B3" stroke-width="1.5" marker-end="url(#ah)"/>
+<text x="726" y="684" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">是</text>
+<rect x="1040" y="96" width="380" height="760" rx="14" fill="#FFFFFF" stroke="#E4E7EC"/>
+<text x="1230" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#12355B" font-family="PingFang SC, Microsoft YaHei, sans-serif">推荐的架构组件</text>
+<text x="1064" y="168" font-size="13" font-weight="700" fill="#0E7090" font-family="PingFang SC, Microsoft YaHei, sans-serif">模型与上下文</text>
+<text x="1064" y="190" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">基座模型 · 路由 · Context 窗口</text>
+<text x="1064" y="210" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">Prompt 版本 · 输出约束</text>
+<text x="1064" y="246" font-size="13" font-weight="700" fill="#B54708" font-family="PingFang SC, Microsoft YaHei, sans-serif">知识与记忆</text>
+<text x="1064" y="268" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">知识工程 · 权限过滤 · RAG</text>
+<text x="1064" y="288" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">Memory：可解释、可删除</text>
+<text x="1064" y="324" font-size="13" font-weight="700" fill="#087443" font-family="PingFang SC, Microsoft YaHei, sans-serif">智能决策</text>
+<text x="1064" y="346" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">Workflow 优先，Agent 按需</text>
+<text x="1064" y="366" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">Multi-Agent 要有仲裁与预算</text>
+<text x="1064" y="402" font-size="13" font-weight="700" fill="#1849A9" font-family="PingFang SC, Microsoft YaHei, sans-serif">工程运行</text>
+<text x="1064" y="424" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">Runtime · 状态 · 队列 · 超时</text>
+<text x="1064" y="444" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">日志 · 指标 · 链路 · 人工接管</text>
+<text x="1064" y="480" font-size="13" font-weight="700" fill="#5925DC" font-family="PingFang SC, Microsoft YaHei, sans-serif">进化</text>
+<text x="1064" y="502" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">评测集 · 灰度 · 失败样本回灌</text>
+<text x="1064" y="538" font-size="13" font-weight="700" fill="#067647" font-family="PingFang SC, Microsoft YaHei, sans-serif">安全与治理</text>
+<text x="1064" y="560" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">身份 · 工具白名单 · 审计</text>
+<text x="1064" y="580" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">高影响动作默认人工确认</text>
+<text x="1064" y="630" font-size="14" font-weight="700" fill="#12355B" font-family="PingFang SC, Microsoft YaHei, sans-serif">最终输出</text>
+<text x="1064" y="658" font-size="13" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">一张场景架构卡：目标、路径、</text>
+<text x="1064" y="680" font-size="13" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">边界、运行责任人、验收指标。</text>
+<text x="1064" y="716" font-size="13" font-weight="700" fill="#12355B" font-family="PingFang SC, Microsoft YaHei, sans-serif">没有责任人的 Agent，不进入生产。</text>
+<rect x="20" y="876" width="1400" height="140" rx="14" fill="#F8FAFC" stroke="#E4E7EC"/>
+<text x="40" y="908" font-size="14" font-weight="700" fill="#12355B" font-family="PingFang SC, Microsoft YaHei, sans-serif">其他决策前还要看</text>
+<text x="40" y="940" font-size="13" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">数据来源：是否有权使用、能否引用、更新频率。</text>
+<text x="40" y="968" font-size="13" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">部署与集成：同步还是异步，是否要进入现有审批流。</text>
+<text x="520" y="940" font-size="13" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">成本约束：单次任务 Token、工具调用次数、人工复核成本。</text>
+<text x="520" y="968" font-size="13" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">业务约束：时效、合规口径、错答的业务后果。</text>
+<text x="1040" y="940" font-size="13" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">若后果不可逆，路径再灵活</text>
+<text x="1040" y="968" font-size="13" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">也要退回 Workflow + 人工确认。</text>
+</svg>

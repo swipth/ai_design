@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Agent 应用架构设计 · 工作汇报</title>
+  <link rel="stylesheet" href="css/report.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="side">
+      <div class="brand-mark">
+        <div class="logo">A</div>
+        <div>
+          <strong>Agent 架构汇报</strong>
+          <span>五张图 · 一套口径</span>
+        </div>
+      </div>
+      <nav>
+        <a href="#brief">汇报提要</a>
+        <a href="#value">价值总览</a>
+        <a href="#method">架构方法论</a>
+        <a href="#fault">故障诊断</a>
+        <a href="#boundary">十大边界</a>
+        <a href="#decision">决策树</a>
+        <a href="#script">十分钟讲稿</a>
+      </nav>
+      <p class="side-foot">材料由架构示意图重绘为 SVG，已去掉手机状态栏、底部黑边和相册操作条。可直接投屏，也可单独下载插图。</p>
+    </aside>
+
+    <main class="page">
+      <header class="hero" id="brief">
+        <p class="eyebrow">工作汇报 · 2026年10月</p>
+        <h1>AI Agent 应用架构设计</h1>
+        <p class="lead">这套材料回答的不是“模型能不能聊天”，而是企业里的智能体如何被设计成可交付、可治理、可排障、可进化的系统。建议汇报时始终抓住一句主线：五层往上交付价值，两侧横切约束风险，三条流把系统跑起来，十条边界划清责任，一棵决策树决定技术路径。</p>
+        <div class="metrics">
+          <div class="metric"><b>5 层</b><span>从模型到进化</span></div>
+          <div class="metric"><b>2 横切</b><span>安全 · 价值</span></div>
+          <div class="metric"><b>3 系统流</b><span>数据 · 控制 · 价值</span></div>
+          <div class="metric"><b>10 边界</b><span>什么不交给模型</span></div>
+          <div class="metric"><b>1 闭环</b><span>用失败样本变好</span></div>
+        </div>
+      </header>
+
+      <section id="value">
+        <h2>一、价值总览：先讲结果，再讲层次</h2>
+        <p class="kicker">对应原图中的业务价值架构。适合开场 60–90 秒，让听众先看到价值从哪来。</p>
+        <div class="card">
+          <div class="figure-bar">
+            <span>图 1 · 已去除手机黑边，按原结构重绘</span>
+            <a href="svg/01-value-architecture.svg" target="_blank" rel="noopener">打开 / 下载 SVG</a>
+          </div>
+          <div class="figure-wrap">
+            <img src="svg/01-value-architecture.svg" alt="业务价值架构总览：五层主架构、安全合规、价值交付与进化闭环" />
+          </div>
+        </div>
+        <div class="grid-2">
+          <article class="note prose">
+            <strong>这张图在说什么</strong>
+            <p>最上面是业务价值：用户满意、任务完成、业务增长。箭头向下写成“价值交付”，意思是下面每一层都要为这三个结果服务，而不是为技术完整度服务。</p>
+            <p>中间五层自下而上是能力栈：模型与上下文决定“能做什么”，知识与记忆决定“知道并记住什么”，智能决策决定“如何完成任务”，工程运行决定“能不能稳定跑”，迭代进化决定“会不会越来越好”。</p>
+          </article>
+          <article class="say prose">
+            <strong>建议口述</strong>
+            <p>我们不把 Agent 理解成一个对话框。它是一条向上的价值链：底层提供能力，中层完成任务，顶层用评估、实验、发布和反馈保证系统会变好。左边的安全合规贯穿全程，右边只用业务结果验收。底下一根数据供给链和一条进化闭环，保证明天的系统比今天更可靠。</p>
+          </article>
+        </div>
+        <h3>分层口径，被追问时按这个答</h3>
+        <div class="grid-3">
+          <article class="check"><strong>1 模型与上下文</strong><ul><li>基座、行业模型、多模态只解决“会说、会看”。</li><li>上下文、提示词、路由和配额决定一次调用是否可控。</li></ul></article>
+          <article class="check"><strong>2 知识与记忆</strong><ul><li>知识工程把文档变成可权限过滤的结构。</li><li>RAG 负责找得到，Memory 负责跨会话还记得。</li></ul></article>
+          <article class="check"><strong>3–5 决策、运行、进化</strong><ul><li>能走流程就走 Workflow，需要动态规划才用 Agent。</li><li>没有运行时和可观测性，就不能称为生产系统。</li><li>没有评测和反馈，就只有一次演示。</li></ul></article>
+        </div>
+      </section>
+
+      <section id="method">
+        <h2>二、架构方法论：把口号拆成可建设的组件</h2>
+        <p class="kicker">这是汇报的主体。用 3 分钟把“5 + 2 + 3 + 1”讲完，听众就能跟上后面的边界和决策树。</p>
+        <div class="card">
+          <div class="figure-bar">
+            <span>图 2 · AI 应用系统架构方法论</span>
+            <a href="svg/02-methodology.svg" target="_blank" rel="noopener">打开 / 下载 SVG</a>
+          </div>
+          <div class="figure-wrap">
+            <img src="svg/02-methodology.svg" alt="AI 应用系统架构方法论：五层、两侧横切与四条底部系统说明" />
+          </div>
+        </div>
+        <div class="prose">
+          <h3>5 层主架构，每层只回答一个问题</h3>
+          <p>评估与进化层回答“怎样证明它变好了”：自动评测、人工抽检、业务指标、A/B 与灰度、可回滚的发布、失败样本回流。工程运行层回答“怎样稳定跑”：Agent Runtime 与 Workflow Runtime、会话和任务状态、工具编排、日志指标链路和告警。智能决策层回答“任务怎么做完”：固定流程、单智能体规划、多智能体分工，以及必须保留的人机确认。知识与记忆层回答“依据是什么”：解析切片、带权限的检索、短期与长期记忆、索引更新与失效。模型与上下文层回答“这次调用装进了什么”：模型路由、窗口与摘要、提示词模板、安全过滤和成本配额。</p>
+          <h3>2 个横切维度不要做成第六层</h3>
+          <p>安全与治理、价值交付如果单独做一层，团队会以为做完一层就结束了。它们必须出现在每一次检索、每一次工具调用和每一次发布里。身份、权限、隐私、内容、审计、人工接管是安全横切；用户是否完成任务、时效、成本、转化是价值横切。汇报时可以明确说：安全不是评审会上的附录，价值也不是上线后的感觉。</p>
+          <h3>3 条系统流 + 1 个闭环</h3>
+          <p>数据流保证知识来得干净、权责清楚。控制流保证从目标到停止条件是可追踪的。价值流保证优化指标和业务结果对齐。进化闭环把线上轨迹收成评测题，再进入实验和发布。四者缺一，系统就会停在“能演示”。</p>
+        </div>
+      </section>
+
+      <section id="fault">
+        <h2>三、故障诊断：上线之后如何在最短路径恢复</h2>
+        <p class="kicker">这张图用于说明架构不是画完就结束。它把排障从个人经验变成五步动作。</p>
+        <div class="card">
+          <div class="figure-bar">
+            <span>图 3 · 故障诊断地图</span>
+            <a href="svg/03-fault-diagnosis.svg" target="_blank" rel="noopener">打开 / 下载 SVG</a>
+          </div>
+          <div class="figure-wrap">
+            <img src="svg/03-fault-diagnosis.svg" alt="故障诊断地图：现象、五步排查与常用手段" />
+          </div>
+        </div>
+        <div class="grid-2">
+          <article class="note prose">
+            <strong>五步不要跳</strong>
+            <p>发现问题：先看影响面和分级，安全事件立即切断工具与外发。定位范围：从网关、鉴权、运行时、决策、检索记忆到模型供应商逐层切开，避免全员同时猜。分析原因：用会话 ID、版本、检索片段、工具入参出参对照，一次只怀疑一个变量。解决问题：先降级、回滚、限流，再补知识、收紧停止条件、补评测。复盘总结：写清哪条边界被突破，并决定决策树要不要改。</p>
+          </article>
+          <article class="say prose">
+            <strong>建议口述</strong>
+            <p>Agent 故障和普通接口故障不一样，它可能“看起来成功、业务上是错的”。所以诊断地图把正确性、权限、成本和幻觉放进同一套分级。没有会话编号和模型版本，我们不开始分析。恢复动作优先于漂亮的根因故事，根因必须能变成下一次的发布门禁。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="boundary">
+        <h2>四、十大边界：把“模型都很能”收成可执行的否决项</h2>
+        <p class="kicker">当讨论跑偏到功能清单时，用这张图把话题拉回责任。每一条边界都对应五层中的执行位置。</p>
+        <div class="card">
+          <div class="figure-bar">
+            <span>图 4 · 十大边界</span>
+            <a href="svg/04-ten-boundaries.svg" target="_blank" rel="noopener">打开 / 下载 SVG</a>
+          </div>
+          <div class="figure-wrap">
+            <img src="svg/04-ten-boundaries.svg" alt="AI 应用架构十大边界，以及与五层架构、三条系统流的对应关系" />
+          </div>
+        </div>
+        <div class="prose">
+          <p>十条边界可以收成三句追问。第一，这件事越过了哪一条边界：是模型在替人做决定，是知识超出授权范围，是工具没有失败语义，还是高影响动作没有人确认。第二，这条边界在五层的哪一层执行：提示词版本在模型层，权限过滤在知识层，停止和预算在运行层，验收阈值在进化层。第三，谁验收、谁能停止、谁负责任。答不上来的能力，不放进本季度交付。</p>
+          <p>特别需要强调责任边界和数据边界。生成内容可以辅助起草，不能替代制度、审批和最终签字。训练数据、索引、日志和导出必须分开；敏感内容默认可以不进模型。运行边界则要求超时、重试、并发和成本有上限，系统失控时必须存在一个能按下的停止开关。</p>
+        </div>
+      </section>
+
+      <section id="decision">
+        <h2>五、决策树：技术选型从业务问题出发</h2>
+        <p class="kicker">这张图用来挡住“一律上多智能体”。路径可以叠加，但不能跳过更简单的方案。</p>
+        <div class="card">
+          <div class="figure-bar">
+            <span>图 5 · 架构决策树</span>
+            <a href="svg/05-decision-tree.svg" target="_blank" rel="noopener">打开 / 下载 SVG</a>
+          </div>
+          <div class="figure-wrap">
+            <img src="svg/05-decision-tree.svg" alt="从业务目标出发的 AI 应用架构决策树" />
+          </div>
+        </div>
+        <div class="grid-2">
+          <article class="note prose">
+            <strong>判断顺序</strong>
+            <ul>
+              <li>流程固定且要审计：用 Workflow，不要用自由规划。</li>
+              <li>答案依赖企业知识或外部事实：加 RAG，并返回引用。</li>
+              <li>信息必须跨会话保留：加 Memory，且允许用户删除。</li>
+              <li>路径不固定但目标明确：才引入单 Agent，并写清停止条件。</li>
+              <li>多个角色真正独立、需要交接仲裁：才使用 Multi-Agent。</li>
+              <li>要定时、重试、排队和观测：无论上面选了什么，都要有 Runtime。</li>
+            </ul>
+          </article>
+          <article class="say prose">
+            <strong>建议口述</strong>
+            <p>决策树不是六选一。一个场景可以同时需要流程、检索和运行时。它禁止的是跳步：还没证明流程不够，就上多智能体；还没划清数据和权限，就让模型直接调用写接口。若动作不可逆，再灵活的路径也退回“流程 + 人工确认”。最终交付物不是一张概念图，而是一张场景架构卡：目标、路径、边界、运行责任人和验收指标。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="script">
+        <h2>六、十分钟讲稿与收束</h2>
+        <div class="grid-2">
+          <article class="note">
+            <h3>时间分配</h3>
+            <dl class="agenda">
+              <dt>0:00</dt><dd>用价值总览说明：我们交付的是业务结果，不是对话次数。</dd>
+              <dt>1:30</dt><dd>用方法论讲清五层、两侧横切、三条流和一个闭环。</dd>
+              <dt>4:30</dt><dd>用十大边界回答“模型的权力停在哪里”。</dd>
+              <dt>6:30</dt><dd>用决策树说明本阶段为什么这样选型。</dd>
+              <dt>8:15</dt><dd>用诊断地图说明上线后谁来恢复、如何复盘。</dd>
+              <dt>9:30</dt><dd>收束到下一阶段要补的评测、权限和运行责任人。</dd>
+            </dl>
+          </article>
+          <article class="say prose">
+            <strong>收束可以这样说</strong>
+            <p>架构设计的完成标准不是图的层数，而是四个问题都有负责人：用户任务是否被完成，依据是否来自授权知识，高风险动作是否有人确认，系统变差时是否能在一条闭环里被发现并回滚。五张图是同一套口径的五个切面，后续评审、排期和故障复盘都沿用这套词，避免每个项目重新发明一层架构。</p>
+          </article>
+        </div>
+        <h3>落地检查，会后可直接当行动项</h3>
+        <div class="grid-3">
+          <article class="check"><strong>设计</strong><ul><li>每个场景有一张架构卡，标明 Workflow / RAG / Memory / Agent 的取舍。</li><li>十条边界里，至少写明工具、权限、数据和责任四条如何执行。</li></ul></article>
+          <article class="check"><strong>工程</strong><ul><li>会话 ID、模型版本、提示词版本、检索片段可追溯。</li><li>超时、预算、停止、降级和人工接管有开关。</li></ul></article>
+          <article class="check"><strong>运营</strong><ul><li>上线门禁包含评测阈值，而不是只看演示。</li><li>故障复盘能指回某一条边界，并补进评测集。</li></ul></article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="js/report.js"></script>
+</body>
+</html>

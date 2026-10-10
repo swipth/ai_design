@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 860" role="img">
+  <title>业务价值架构总览</title>
+  <desc>五层 Agent 主架构，左侧安全合规，右侧价值交付，底部数据供给与持续进化闭环。</desc>
+  <rect width="100%" height="100%" fill="#F6F8FB"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1.2 L8 5 L0 8.8 Z" fill="#98A2B3"/></marker></defs>
+<rect x="390" y="22" width="500" height="86" rx="16" fill="#FFFFFF" stroke="#E6EAF0"/>
+<circle cx="438" cy="65" r="18" fill="#E8F1FF"/>
+<text x="470" y="58" font-size="20" font-weight="700" fill="#12355B" font-family="PingFang SC, Microsoft YaHei, sans-serif">业务价值</text>
+<text x="470" y="84" font-size="13" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">用户满意  ·  任务完成  ·  业务增长</text>
+<line x1="640" y1="116" x2="640" y2="146" stroke="#98A2B3" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="654" y="136" font-size="12" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">价值向上交付</text>
+<rect x="24" y="168" width="176" height="500" rx="16" fill="#E7F6EE"/>
+<text x="112" y="198" text-anchor="middle" font-size="15" font-weight="700" fill="#067647" font-family="PingFang SC, Microsoft YaHei, sans-serif">安全合规</text>
+<text x="112" y="218" text-anchor="middle" font-size="11" fill="#12B76A" font-family="PingFang SC, Microsoft YaHei, sans-serif">贯穿全生命周期</text>
+<rect x="1080" y="168" width="176" height="500" rx="16" fill="#F4F0FF"/>
+<text x="1168" y="198" text-anchor="middle" font-size="15" font-weight="700" fill="#6927DA" font-family="PingFang SC, Microsoft YaHei, sans-serif">价值交付</text>
+<text x="1168" y="218" text-anchor="middle" font-size="11" fill="#9B8AFB" font-family="PingFang SC, Microsoft YaHei, sans-serif">以业务结果验收</text>
+<circle cx="44" cy="254" r="3" fill="#12B76A"/>
+<text x="56" y="258" font-size="13" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">身份认证</text>
+<circle cx="44" cy="306" r="3" fill="#12B76A"/>
+<text x="56" y="310" font-size="13" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">权限控制</text>
+<circle cx="44" cy="358" r="3" fill="#12B76A"/>
+<text x="56" y="362" font-size="13" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">隐私保护</text>
+<circle cx="44" cy="410" r="3" fill="#12B76A"/>
+<text x="56" y="414" font-size="13" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">内容安全</text>
+<circle cx="44" cy="462" r="3" fill="#12B76A"/>
+<text x="56" y="466" font-size="13" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">模型安全</text>
+<circle cx="44" cy="514" r="3" fill="#12B76A"/>
+<text x="56" y="518" font-size="13" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">运行安全</text>
+<circle cx="44" cy="566" r="3" fill="#12B76A"/>
+<text x="56" y="570" font-size="13" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">审计合规</text>
+<circle cx="1100" cy="276" r="3" fill="#7A5AF8"/>
+<text x="1112" y="280" font-size="13" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">用户体验</text>
+<circle cx="1100" cy="344" r="3" fill="#7A5AF8"/>
+<text x="1112" y="348" font-size="13" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">任务成功率</text>
+<circle cx="1100" cy="412" r="3" fill="#7A5AF8"/>
+<text x="1112" y="416" font-size="13" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">业务效率</text>
+<circle cx="1100" cy="480" r="3" fill="#7A5AF8"/>
+<text x="1112" y="484" font-size="13" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">成本优化</text>
+<circle cx="1100" cy="548" r="3" fill="#7A5AF8"/>
+<text x="1112" y="552" font-size="13" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">转化提升</text>
+<rect x="216" y="168" width="848" height="92" rx="14" fill="#F4F1FF"/>
+<circle cx="248" cy="214" r="14" fill="#6D5EF5"/>
+<text x="248" y="219" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" font-family="PingFang SC, Microsoft YaHei, sans-serif">5</text>
+<text x="274" y="206" font-size="15" font-weight="700" fill="#3F2E9E" font-family="PingFang SC, Microsoft YaHei, sans-serif">迭代进化层</text>
+<text x="274" y="228" font-size="12" fill="#7A5AF8" font-family="PingFang SC, Microsoft YaHei, sans-serif">让系统持续变好</text>
+<rect x="468" y="184" width="136" height="60" rx="10" fill="#FFFFFF"/>
+<text x="536" y="208" text-anchor="middle" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">评估</text>
+<text x="536" y="228" text-anchor="middle" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">Evaluation</text>
+<rect x="614" y="184" width="136" height="60" rx="10" fill="#FFFFFF"/>
+<text x="682" y="208" text-anchor="middle" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">实验</text>
+<text x="682" y="228" text-anchor="middle" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">Experiment</text>
+<rect x="760" y="184" width="136" height="60" rx="10" fill="#FFFFFF"/>
+<text x="828" y="208" text-anchor="middle" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">发布</text>
+<text x="828" y="228" text-anchor="middle" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">Release</text>
+<rect x="906" y="184" width="136" height="60" rx="10" fill="#FFFFFF"/>
+<text x="974" y="208" text-anchor="middle" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">反馈</text>
+<text x="974" y="228" text-anchor="middle" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">Feedback</text>
+<rect x="216" y="268" width="848" height="92" rx="14" fill="#EAF1FF"/>
+<circle cx="248" cy="314" r="14" fill="#2F6FED"/>
+<text x="248" y="319" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" font-family="PingFang SC, Microsoft YaHei, sans-serif">4</text>
+<text x="274" y="306" font-size="15" font-weight="700" fill="#1849A9" font-family="PingFang SC, Microsoft YaHei, sans-serif">工程运行层</text>
+<text x="274" y="328" font-size="12" fill="#2F6FED" font-family="PingFang SC, Microsoft YaHei, sans-serif">让 AI 稳定运行</text>
+<rect x="468" y="284" width="136" height="60" rx="10" fill="#FFFFFF"/>
+<text x="536" y="308" text-anchor="middle" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">运行时</text>
+<text x="536" y="328" text-anchor="middle" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">Runtime</text>
+<rect x="614" y="284" width="136" height="60" rx="10" fill="#FFFFFF"/>
+<text x="682" y="308" text-anchor="middle" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">状态管理</text>
+<text x="682" y="328" text-anchor="middle" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">State</text>
+<rect x="760" y="284" width="136" height="60" rx="10" fill="#FFFFFF"/>
+<text x="828" y="308" text-anchor="middle" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">编排调度</text>
+<text x="828" y="328" text-anchor="middle" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">Orchestration</text>
+<rect x="906" y="284" width="136" height="60" rx="10" fill="#FFFFFF"/>
+<text x="974" y="308" text-anchor="middle" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">可观测性</text>
+<text x="974" y="328" text-anchor="middle" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">Observability</text>
+<rect x="216" y="368" width="848" height="92" rx="14" fill="#E8F7EF"/>
+<circle cx="248" cy="414" r="14" fill="#1F9D62"/>
+<text x="248" y="419" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" font-family="PingFang SC, Microsoft YaHei, sans-serif">3</text>
+<text x="274" y="406" font-size="15" font-weight="700" fill="#087443" font-family="PingFang SC, Microsoft YaHei, sans-serif">智能决策层</text>
+<text x="274" y="428" font-size="12" fill="#17B26A" font-family="PingFang SC, Microsoft YaHei, sans-serif">如何完成任务</text>
+<rect x="468" y="384" width="136" height="60" rx="10" fill="#FFFFFF"/>
+<text x="536" y="408" text-anchor="middle" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">Workflow</text>
+<text x="536" y="428" text-anchor="middle" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">业务流程</text>
+<rect x="614" y="384" width="136" height="60" rx="10" fill="#FFFFFF"/>
+<text x="682" y="408" text-anchor="middle" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">Agent</text>
+<text x="682" y="428" text-anchor="middle" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">动态决策</text>
+<rect x="760" y="384" width="136" height="60" rx="10" fill="#FFFFFF"/>
+<text x="828" y="408" text-anchor="middle" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">Multi-Agent</text>
+<text x="828" y="428" text-anchor="middle" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">多智能体协作</text>
+<rect x="906" y="384" width="136" height="60" rx="10" fill="#FFFFFF"/>
+<text x="974" y="408" text-anchor="middle" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">人机协同</text>
+<text x="974" y="428" text-anchor="middle" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">确认 / 接管</text>
+<rect x="216" y="468" width="848" height="92" rx="14" fill="#FFF6E8"/>
+<circle cx="248" cy="514" r="14" fill="#E39B12"/>
+<text x="248" y="519" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" font-family="PingFang SC, Microsoft YaHei, sans-serif">2</text>
+<text x="274" y="506" font-size="15" font-weight="700" fill="#B54708" font-family="PingFang SC, Microsoft YaHei, sans-serif">知识与记忆层</text>
+<text x="274" y="528" font-size="12" fill="#DC6803" font-family="PingFang SC, Microsoft YaHei, sans-serif">知道什么、记住什么</text>
+<rect x="468" y="484" width="136" height="60" rx="10" fill="#FFFFFF"/>
+<text x="536" y="508" text-anchor="middle" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">知识工程</text>
+<text x="536" y="528" text-anchor="middle" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">结构化</text>
+<rect x="614" y="484" width="136" height="60" rx="10" fill="#FFFFFF"/>
+<text x="682" y="508" text-anchor="middle" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">检索 / RAG</text>
+<text x="682" y="528" text-anchor="middle" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">找得到、有引用</text>
+<rect x="760" y="484" width="136" height="60" rx="10" fill="#FFFFFF"/>
+<text x="828" y="508" text-anchor="middle" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">Memory</text>
+<text x="828" y="528" text-anchor="middle" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">跨会话记忆</text>
+<rect x="906" y="484" width="136" height="60" rx="10" fill="#FFFFFF"/>
+<text x="974" y="508" text-anchor="middle" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">知识更新</text>
+<text x="974" y="528" text-anchor="middle" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">增量 / 失效</text>
+<rect x="216" y="568" width="848" height="92" rx="14" fill="#E7F6FB"/>
+<circle cx="248" cy="614" r="14" fill="#2F9CC4"/>
+<text x="248" y="619" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" font-family="PingFang SC, Microsoft YaHei, sans-serif">1</text>
+<text x="274" y="606" font-size="15" font-weight="700" fill="#0E7090" font-family="PingFang SC, Microsoft YaHei, sans-serif">模型与上下文层</text>
+<text x="274" y="628" font-size="12" fill="#088AB2" font-family="PingFang SC, Microsoft YaHei, sans-serif">AI 能做什么</text>
+<rect x="468" y="584" width="136" height="60" rx="10" fill="#FFFFFF"/>
+<text x="536" y="608" text-anchor="middle" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">模型</text>
+<text x="536" y="628" text-anchor="middle" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">基座 / 微调 / 多模态</text>
+<rect x="614" y="584" width="136" height="60" rx="10" fill="#FFFFFF"/>
+<text x="682" y="608" text-anchor="middle" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">Context</text>
+<text x="682" y="628" text-anchor="middle" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">上下文管理</text>
+<rect x="760" y="584" width="136" height="60" rx="10" fill="#FFFFFF"/>
+<text x="828" y="608" text-anchor="middle" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">Prompt</text>
+<text x="828" y="628" text-anchor="middle" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">提示词版本</text>
+<rect x="906" y="584" width="136" height="60" rx="10" fill="#FFFFFF"/>
+<text x="974" y="608" text-anchor="middle" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">适配与治理</text>
+<text x="974" y="628" text-anchor="middle" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">路由 / 配额 / 过滤</text>
+<rect x="24" y="688" width="1232" height="64" rx="14" fill="#F4F3FF" stroke="#E4E0FF"/>
+<text x="640" y="714" text-anchor="middle" font-size="14" font-weight="700" fill="#3F2E9E" font-family="PingFang SC, Microsoft YaHei, sans-serif">数据供给链与治理 · 贯穿全层</text>
+<text x="640" y="736" text-anchor="middle" font-size="13" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">数据采集    数据治理    权限与质量    数据安全    可追溯</text>
+<rect x="24" y="764" width="1232" height="76" rx="14" fill="#E7F8F4"/>
+<text x="640" y="790" text-anchor="middle" font-size="14" font-weight="700" fill="#0E7090" font-family="PingFang SC, Microsoft YaHei, sans-serif">持续进化闭环</text>
+<rect x="250" y="802" width="100" height="28" rx="14" fill="#FFFFFF"/>
+<text x="300" y="821" text-anchor="middle" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">数据</text>
+<line x1="354" y1="816" x2="382" y2="816" stroke="#98A2B3" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="390" y="802" width="100" height="28" rx="14" fill="#FFFFFF"/>
+<text x="440" y="821" text-anchor="middle" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">评价</text>
+<line x1="494" y1="816" x2="522" y2="816" stroke="#98A2B3" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="530" y="802" width="100" height="28" rx="14" fill="#FFFFFF"/>
+<text x="580" y="821" text-anchor="middle" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">实验</text>
+<line x1="634" y1="816" x2="662" y2="816" stroke="#98A2B3" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="670" y="802" width="100" height="28" rx="14" fill="#FFFFFF"/>
+<text x="720" y="821" text-anchor="middle" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">发布</text>
+<line x1="774" y1="816" x2="802" y2="816" stroke="#98A2B3" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="810" y="802" width="100" height="28" rx="14" fill="#FFFFFF"/>
+<text x="860" y="821" text-anchor="middle" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">反馈</text>
+<line x1="914" y1="816" x2="942" y2="816" stroke="#98A2B3" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="950" y="802" width="100" height="28" rx="14" fill="#0E7090"/>
+<text x="1000" y="821" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" font-family="PingFang SC, Microsoft YaHei, sans-serif">再评估</text>
+</svg>

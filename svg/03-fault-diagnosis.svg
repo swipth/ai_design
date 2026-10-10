@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 980" role="img">
+  <title>故障诊断地图</title>
+  <desc>从现象到复盘的五步排障：发现问题、定位范围、分析原因、解决问题、复盘总结。</desc>
+  <rect width="100%" height="100%" fill="#F6F8FB"/>
+<rect x="0" y="0" width="1440" height="86" fill="#12355B"/>
+<text x="36" y="40" font-size="24" font-weight="700" fill="#FFFFFF" font-family="PingFang SC, Microsoft YaHei, sans-serif">故障诊断地图</text>
+<text x="36" y="66" font-size="13" fill="#D6E4F5" font-family="PingFang SC, Microsoft YaHei, sans-serif">快速定位问题  ·  系统化排查  ·  高质量恢复服务</text>
+<text x="1404" y="52" text-anchor="end" font-size="13" fill="#D6E4F5" font-family="PingFang SC, Microsoft YaHei, sans-serif">目标：最短路径恢复，最小爆炸半径</text>
+<rect x="16" y="106" width="156" height="690" rx="12" fill="#E7F6EE"/>
+<text x="94" y="136" text-anchor="middle" font-size="14" font-weight="700" fill="#067647" font-family="PingFang SC, Microsoft YaHei, sans-serif">常见故障现象</text>
+<text x="32" y="176" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">服务不可用</text>
+<text x="32" y="198" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">超时 / 5xx / 无响应</text>
+<text x="32" y="256" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">性能下降</text>
+<text x="32" y="278" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">变慢、排队、抖动</text>
+<text x="32" y="336" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">功能异常</text>
+<text x="32" y="358" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">答非所问、工具失败</text>
+<text x="32" y="416" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">数据问题</text>
+<text x="32" y="438" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">检索空、引用错、过期</text>
+<text x="32" y="496" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">安全事件</text>
+<text x="32" y="518" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">越权、注入、泄密</text>
+<text x="32" y="576" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">成本异常</text>
+<text x="32" y="598" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">Token 突增、死循环</text>
+<text x="32" y="656" font-size="13" font-weight="700" fill="#1D2939" font-family="PingFang SC, Microsoft YaHei, sans-serif">体验投诉</text>
+<text x="32" y="678" font-size="11" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif">幻觉、语气、拒答</text>
+<rect x="184" y="106" width="234" height="40" rx="10" fill="#2F6FED"/>
+<text x="301" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF" font-family="PingFang SC, Microsoft YaHei, sans-serif">1 发现问题</text>
+<rect x="184" y="154" width="234" height="642" rx="12" fill="#EAF1FF"/>
+<text x="200" y="186" font-size="13" font-weight="700" fill="#1849A9" font-family="PingFang SC, Microsoft YaHei, sans-serif">先确认影响面</text>
+<text x="200" y="212" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">告警与用户反馈</text>
+<text x="200" y="234" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">错误率 / 延迟 / 饱和</text>
+<text x="200" y="256" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">是否只影响单智能体</text>
+<text x="200" y="294" font-size="13" font-weight="700" fill="#1849A9" font-family="PingFang SC, Microsoft YaHei, sans-serif">记录现场</text>
+<text x="200" y="320" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">会话 ID、用户、时间</text>
+<text x="200" y="342" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">输入、工具、模型版本</text>
+<text x="200" y="364" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">是否可复现</text>
+<text x="200" y="402" font-size="13" font-weight="700" fill="#1849A9" font-family="PingFang SC, Microsoft YaHei, sans-serif">分级</text>
+<text x="200" y="428" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">可用性 / 正确性 / 安全</text>
+<text x="200" y="450" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">决定是否先止血</text>
+<rect x="430" y="106" width="234" height="40" rx="10" fill="#0E9384"/>
+<text x="547" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF" font-family="PingFang SC, Microsoft YaHei, sans-serif">2 定位范围</text>
+<rect x="430" y="154" width="234" height="642" rx="12" fill="#E6F7F4"/>
+<text x="446" y="186" font-size="13" font-weight="700" fill="#0E7090" font-family="PingFang SC, Microsoft YaHei, sans-serif">从上到下切层</text>
+<text x="446" y="212" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">网关 / 鉴权 / 路由</text>
+<text x="446" y="234" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">运行时 / 队列 / 超时</text>
+<text x="446" y="256" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">决策：Workflow 或 Agent</text>
+<text x="446" y="278" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">检索 / 记忆 / 提示词</text>
+<text x="446" y="300" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">模型供应商与配额</text>
+<text x="446" y="338" font-size="13" font-weight="700" fill="#0E7090" font-family="PingFang SC, Microsoft YaHei, sans-serif">缩小爆炸半径</text>
+<text x="446" y="364" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">单用户还是全量</text>
+<text x="446" y="386" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">单工具还是主链路</text>
+<text x="446" y="408" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">新版本还是存量数据</text>
+<rect x="676" y="106" width="234" height="40" rx="10" fill="#DC6803"/>
+<text x="793" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF" font-family="PingFang SC, Microsoft YaHei, sans-serif">3 分析原因</text>
+<rect x="676" y="154" width="234" height="642" rx="12" fill="#FFF6E8"/>
+<text x="692" y="186" font-size="13" font-weight="700" fill="#B54708" font-family="PingFang SC, Microsoft YaHei, sans-serif">对照证据</text>
+<text x="692" y="212" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">日志与链路追踪</text>
+<text x="692" y="234" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">检索命中与引用片段</text>
+<text x="692" y="256" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">工具入参 / 出参</text>
+<text x="692" y="278" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">提示词与上下文长度</text>
+<text x="692" y="300" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">评测集同题对比</text>
+<text x="692" y="338" font-size="13" font-weight="700" fill="#B54708" font-family="PingFang SC, Microsoft YaHei, sans-serif">常见根因</text>
+<text x="692" y="364" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">知识过期或权限过滤</text>
+<text x="692" y="386" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">状态串会话</text>
+<text x="692" y="408" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">循环调用、无停止条件</text>
+<text x="692" y="430" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">模型路由切到错误版本</text>
+<rect x="922" y="106" width="234" height="40" rx="10" fill="#6938EF"/>
+<text x="1039" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF" font-family="PingFang SC, Microsoft YaHei, sans-serif">4 解决问题</text>
+<rect x="922" y="154" width="234" height="642" rx="12" fill="#F4F0FF"/>
+<text x="938" y="186" font-size="13" font-weight="700" fill="#5925DC" font-family="PingFang SC, Microsoft YaHei, sans-serif">先恢复，再根治</text>
+<text x="938" y="212" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">降级到流程或人工</text>
+<text x="938" y="234" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">关闭高风险工具</text>
+<text x="938" y="256" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">回滚提示词或模型</text>
+<text x="938" y="278" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">限流、熔断、停队列</text>
+<text x="938" y="316" font-size="13" font-weight="700" fill="#5925DC" font-family="PingFang SC, Microsoft YaHei, sans-serif">修复动作</text>
+<text x="938" y="342" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">补知识、修切片、改权限</text>
+<text x="938" y="364" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">收紧上下文与停止条件</text>
+<text x="938" y="386" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">补评测用例防回归</text>
+<text x="938" y="408" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">灰度后再全量</text>
+<rect x="1168" y="106" width="234" height="40" rx="10" fill="#155EEF"/>
+<text x="1285" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF" font-family="PingFang SC, Microsoft YaHei, sans-serif">5 复盘总结</text>
+<rect x="1168" y="154" width="234" height="642" rx="12" fill="#EEF4FF"/>
+<text x="1184" y="186" font-size="13" font-weight="700" fill="#1849A9" font-family="PingFang SC, Microsoft YaHei, sans-serif">留下可复用资产</text>
+<text x="1184" y="212" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">时间线与根因</text>
+<text x="1184" y="234" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">影响用户与业务</text>
+<text x="1184" y="256" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">检测为什么晚了</text>
+<text x="1184" y="278" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">哪条边界被突破</text>
+<text x="1184" y="316" font-size="13" font-weight="700" fill="#1849A9" font-family="PingFang SC, Microsoft YaHei, sans-serif">改进项</text>
+<text x="1184" y="342" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">告警与运行手册</text>
+<text x="1184" y="364" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">评测集与发布门禁</text>
+<text x="1184" y="386" font-size="12" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">架构决策是否要改</text>
+<rect x="16" y="816" width="1408" height="140" rx="14" fill="#FFFFFF" stroke="#E4E7EC"/>
+<text x="36" y="848" font-size="15" font-weight="700" fill="#12355B" font-family="PingFang SC, Microsoft YaHei, sans-serif">排障原则</text>
+<text x="36" y="878" font-size="13" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">1. 先保护用户与数据，再追求根因完美。安全类事件立刻切断工具与外发。</text>
+<text x="36" y="904" font-size="13" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">2. 一次只改一个变量：模型、提示词、检索、工具不要在同一刻一起改。</text>
+<text x="36" y="930" font-size="13" fill="#344054" font-family="PingFang SC, Microsoft YaHei, sans-serif">3. 没有会话 ID 和版本号，就不要开始猜。复盘必须能回到决策树：该不该用 Agent。</text>
+</svg>
