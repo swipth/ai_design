@@ -3,199 +3,248 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AI Agent 应用架构设计 · 工作汇报</title>
+  <title>AI Agent 应用架构设计 · 企业级架构视图</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=JetBrains+Mono:wght@500;600&family=Noto+Sans+SC:wght@500;600;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/report.css" />
 </head>
-<body>
-  <div class="shell">
+<body class="locked">
+  <div class="access-gate" id="access-gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <div class="access-gate__panel">
+      <div class="access-gate__brand">
+        <div class="logo">A</div>
+        <div>
+          <strong id="gate-title">Agent 架构体系</strong>
+          <span>受保护的企业级架构材料</span>
+        </div>
+      </div>
+      <p class="access-gate__hint">请输入访问密码以继续浏览</p>
+      <form class="access-gate__form" id="access-form" autocomplete="off">
+        <label class="sr-only" for="access-input">访问密码</label>
+        <input
+          id="access-input"
+          class="access-gate__input"
+          type="password"
+          inputmode="numeric"
+          maxlength="32"
+          placeholder="访问密码"
+          required
+        />
+        <p class="access-gate__error" id="access-error" hidden role="alert">密码错误，请重试</p>
+        <button type="submit" class="access-gate__submit">进入架构视图</button>
+      </form>
+    </div>
+  </div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="shell" id="app-shell" hidden>
     <aside class="side">
       <div class="brand-mark">
         <div class="logo">A</div>
         <div>
-          <strong>Agent 架构汇报</strong>
-          <span>五张图 · 一套口径</span>
+          <strong>Agent 架构体系</strong>
+          <span>Enterprise · Architecture</span>
         </div>
       </div>
       <nav>
-        <a href="#brief">汇报提要</a>
-        <a href="#value">价值总览</a>
-        <a href="#method">架构方法论</a>
+        <a href="#brief">核心命题</a>
+        <a href="#value">价值架构</a>
+        <a href="#method">方法论</a>
         <a href="#fault">故障诊断</a>
         <a href="#boundary">十大边界</a>
         <a href="#decision">决策树</a>
-        <a href="#script">十分钟讲稿</a>
+        <a href="#governance">落地治理</a>
       </nav>
-      <p class="side-foot">材料由架构示意图重绘为 SVG，已去掉手机状态栏、底部黑边和相册操作条。可直接投屏，也可单独下载插图。</p>
+      <p class="side-foot">矢量架构视图 · 可投屏演示 · 支持独立导出 SVG</p>
     </aside>
 
     <main class="page">
       <header class="hero" id="brief">
-        <p class="eyebrow">工作汇报 · 2026年10月</p>
+        <p class="eyebrow">Enterprise AI Agent Architecture</p>
         <h1>AI Agent 应用架构设计</h1>
-        <p class="lead">这套材料回答的不是“模型能不能聊天”，而是企业里的智能体如何被设计成可交付、可治理、可排障、可进化的系统。建议汇报时始终抓住一句主线：五层往上交付价值，两侧横切约束风险，三条流把系统跑起来，十条边界划清责任，一棵决策树决定技术路径。</p>
+        <p class="lead">本体系回答的不是「模型能不能聊天」，而是企业智能体如何被设计成<span class="key">可交付、可治理、可排障、可进化</span>的系统。主线口径：<span class="hl">五层</span>向上交付价值，<span class="hl">两侧横切</span>约束风险，<span class="hl">三条流</span>驱动运行，<span class="hl">十条边界</span>划清责任，<span class="hl">一棵决策树</span>锚定技术路径。</p>
         <div class="metrics">
-          <div class="metric"><b>5 层</b><span>从模型到进化</span></div>
-          <div class="metric"><b>2 横切</b><span>安全 · 价值</span></div>
+          <div class="metric"><b>5 层</b><span>能力栈 · 模型至进化</span></div>
+          <div class="metric"><b>2 横切</b><span>安全治理 · 价值交付</span></div>
           <div class="metric"><b>3 系统流</b><span>数据 · 控制 · 价值</span></div>
-          <div class="metric"><b>10 边界</b><span>什么不交给模型</span></div>
-          <div class="metric"><b>1 闭环</b><span>用失败样本变好</span></div>
+          <div class="metric"><b>10 边界</b><span>模型权责上限</span></div>
+          <div class="metric"><b>1 闭环</b><span>失败样本驱动演进</span></div>
         </div>
       </header>
 
-      <section id="value">
-        <h2>一、价值总览：先讲结果，再讲层次</h2>
-        <p class="kicker">对应原图中的业务价值架构。适合开场 60–90 秒，让听众先看到价值从哪来。</p>
+      <section class="reveal" id="value">
+        <span class="section-tag">01 · VALUE</span>
+        <h2>价值架构总览</h2>
+        <p class="kicker">业务价值架构：<span class="key">先锚定结果，再展开层次</span>。价值自上而下贯穿五层能力栈，安全与合规横切全程。</p>
         <div class="card">
           <div class="figure-bar">
-            <span>图 1 · 已去除手机黑边，按原结构重绘</span>
-            <a href="svg/01-value-architecture.svg" target="_blank" rel="noopener">打开 / 下载 SVG</a>
+            <span>FIG-01 · 业务价值与五层主架构</span>
+            <a href="svg/01-value-architecture.svg" target="_blank" rel="noopener">导出 SVG</a>
           </div>
-          <div class="figure-wrap">
-            <img src="svg/01-value-architecture.svg" alt="业务价值架构总览：五层主架构、安全合规、价值交付与进化闭环" />
+          <div class="figure-wrap figure-zoom" tabindex="0" role="button" aria-label="点击放大预览：业务价值架构">
+            <img src="svg/01-value-architecture.svg" alt="业务价值架构总览：五层主架构、安全合规、价值交付与进化闭环" draggable="false" />
           </div>
         </div>
         <div class="grid-2">
           <article class="note prose">
-            <strong>这张图在说什么</strong>
-            <p>最上面是业务价值：用户满意、任务完成、业务增长。箭头向下写成“价值交付”，意思是下面每一层都要为这三个结果服务，而不是为技术完整度服务。</p>
-            <p>中间五层自下而上是能力栈：模型与上下文决定“能做什么”，知识与记忆决定“知道并记住什么”，智能决策决定“如何完成任务”，工程运行决定“能不能稳定跑”，迭代进化决定“会不会越来越好”。</p>
+            <strong>架构语义</strong>
+            <p>顶层业务价值：<span class="key">用户满意、任务完成、业务增长</span>。「价值交付」表示下层每一级均服务于上述结果，而非为技术完整度服务。</p>
+            <p>五层能力栈自下而上：<span class="hl">模型与上下文</span>界定能力边界；<span class="hl">知识与记忆</span>承载依据与延续；<span class="hl">智能决策</span>完成任务路径；<span class="hl">工程运行</span>保障稳定生产；<span class="hl">迭代进化</span>使系统持续改进。</p>
           </article>
-          <article class="say prose">
-            <strong>建议口述</strong>
-            <p>我们不把 Agent 理解成一个对话框。它是一条向上的价值链：底层提供能力，中层完成任务，顶层用评估、实验、发布和反馈保证系统会变好。左边的安全合规贯穿全程，右边只用业务结果验收。底下一根数据供给链和一条进化闭环，保证明天的系统比今天更可靠。</p>
+          <article class="note prose">
+            <strong>系统级含义</strong>
+            <p><span class="key">Agent 不是单点对话框</span>，而是向上的价值链：底层供能、中层履约、顶层以评估、实验、发布与反馈驱动演进。安全合规贯穿检索与工具调用；<span class="key">验收仅以业务结果为准</span>。</p>
+            <p>数据供给链与<span class="hl">进化闭环</span>并存，保证系统在运行中可靠性不断提升，而非<span class="warn">一次性演示后即停滞</span>。</p>
           </article>
         </div>
-        <h3>分层口径，被追问时按这个答</h3>
+        <h3>分层定义</h3>
         <div class="grid-3">
-          <article class="check"><strong>1 模型与上下文</strong><ul><li>基座、行业模型、多模态只解决“会说、会看”。</li><li>上下文、提示词、路由和配额决定一次调用是否可控。</li></ul></article>
-          <article class="check"><strong>2 知识与记忆</strong><ul><li>知识工程把文档变成可权限过滤的结构。</li><li>RAG 负责找得到，Memory 负责跨会话还记得。</li></ul></article>
-          <article class="check"><strong>3–5 决策、运行、进化</strong><ul><li>能走流程就走 Workflow，需要动态规划才用 Agent。</li><li>没有运行时和可观测性，就不能称为生产系统。</li><li>没有评测和反馈，就只有一次演示。</li></ul></article>
+          <article class="check"><strong>模型与上下文</strong><ul><li>基座、行业模型、多模态解决感知与生成能力。</li><li>上下文、提示词、路由与配额界定单次调用的可控范围。</li></ul></article>
+          <article class="check"><strong>知识与记忆</strong><ul><li>知识工程将文档结构化为可权限过滤的知识资产。</li><li>RAG 负责检索命中，Memory 负责跨会话延续。</li></ul></article>
+          <article class="check"><strong>决策 · 运行 · 进化</strong><ul><li>流程可固化时优先 <span class="term">Workflow</span>；动态规划场景再引入 <span class="term">Agent</span>。</li><li><span class="warn">无运行时与可观测性，不构成生产级系统。</span></li><li><span class="warn">无评测与反馈闭环，无法证明持续变好。</span></li></ul></article>
         </div>
       </section>
 
-      <section id="method">
-        <h2>二、架构方法论：把口号拆成可建设的组件</h2>
-        <p class="kicker">这是汇报的主体。用 3 分钟把“5 + 2 + 3 + 1”讲完，听众就能跟上后面的边界和决策树。</p>
+      <section class="reveal" id="method">
+        <span class="section-tag">02 · METHOD</span>
+        <h2>架构方法论</h2>
+        <p class="kicker">将 <span class="hl">5 + 2 + 3 + 1</span> 拆解为可建设、可验收的组件与流，形成<span class="key">统一建设与评审口径</span>。</p>
         <div class="card">
           <div class="figure-bar">
-            <span>图 2 · AI 应用系统架构方法论</span>
-            <a href="svg/02-methodology.svg" target="_blank" rel="noopener">打开 / 下载 SVG</a>
+            <span>FIG-02 · 系统架构方法论</span>
+            <a href="svg/02-methodology.svg" target="_blank" rel="noopener">导出 SVG</a>
           </div>
-          <div class="figure-wrap">
-            <img src="svg/02-methodology.svg" alt="AI 应用系统架构方法论：五层、两侧横切与四条底部系统说明" />
+          <div class="figure-wrap figure-zoom" tabindex="0" role="button" aria-label="点击放大预览：架构方法论">
+            <img src="svg/02-methodology.svg" alt="AI 应用系统架构方法论：五层、两侧横切与四条底部系统说明" draggable="false" />
           </div>
         </div>
         <div class="prose">
-          <h3>5 层主架构，每层只回答一个问题</h3>
-          <p>评估与进化层回答“怎样证明它变好了”：自动评测、人工抽检、业务指标、A/B 与灰度、可回滚的发布、失败样本回流。工程运行层回答“怎样稳定跑”：Agent Runtime 与 Workflow Runtime、会话和任务状态、工具编排、日志指标链路和告警。智能决策层回答“任务怎么做完”：固定流程、单智能体规划、多智能体分工，以及必须保留的人机确认。知识与记忆层回答“依据是什么”：解析切片、带权限的检索、短期与长期记忆、索引更新与失效。模型与上下文层回答“这次调用装进了什么”：模型路由、窗口与摘要、提示词模板、安全过滤和成本配额。</p>
-          <h3>2 个横切维度不要做成第六层</h3>
-          <p>安全与治理、价值交付如果单独做一层，团队会以为做完一层就结束了。它们必须出现在每一次检索、每一次工具调用和每一次发布里。身份、权限、隐私、内容、审计、人工接管是安全横切；用户是否完成任务、时效、成本、转化是价值横切。汇报时可以明确说：安全不是评审会上的附录，价值也不是上线后的感觉。</p>
-          <h3>3 条系统流 + 1 个闭环</h3>
-          <p>数据流保证知识来得干净、权责清楚。控制流保证从目标到停止条件是可追踪的。价值流保证优化指标和业务结果对齐。进化闭环把线上轨迹收成评测题，再进入实验和发布。四者缺一，系统就会停在“能演示”。</p>
+          <h3>五层主架构 · 每层单一职责</h3>
+          <p>评估与进化层：自动评测、人工抽检、业务指标、A/B 与灰度、可回滚发布、失败样本回流。工程运行层：Agent / Workflow Runtime、会话与任务状态、工具编排、日志指标链路与告警。智能决策层：固定流程、单智能体规划、多智能体分工及人机确认节点。知识与记忆层：解析切片、带权限检索、短长期记忆、索引更新与失效策略。模型与上下文层：模型路由、窗口与摘要、提示词模板、安全过滤与成本配额。</p>
+          <h3>横切维度 · 非第六层</h3>
+          <p>安全与治理、价值交付须<span class="key">嵌入每一次检索、工具调用与发布</span>。身份、权限、隐私、内容、审计、人工接管构成安全横切；任务完成度、时效、成本、转化构成价值横切。<span class="warn">安全不是附录文档，价值不是上线后的主观感受。</span></p>
+          <h3>三条系统流与进化闭环</h3>
+          <p>数据流保证知识洁净与权责清晰。控制流保证从目标到停止条件可追踪。价值流保证优化指标与业务对齐。进化闭环将线上轨迹沉淀为评测资产，进入实验与发布。<span class="warn">四者缺一，系统停留在「可演示」阶段。</span></p>
         </div>
       </section>
 
-      <section id="fault">
-        <h2>三、故障诊断：上线之后如何在最短路径恢复</h2>
-        <p class="kicker">这张图用于说明架构不是画完就结束。它把排障从个人经验变成五步动作。</p>
+      <section class="reveal" id="fault">
+        <span class="section-tag">03 · RESILIENCE</span>
+        <h2>故障诊断体系</h2>
+        <p class="kicker">架构交付不以制图完成为终点。将排障从个人经验收敛为可重复的五步动作与分级响应。</p>
         <div class="card">
           <div class="figure-bar">
-            <span>图 3 · 故障诊断地图</span>
-            <a href="svg/03-fault-diagnosis.svg" target="_blank" rel="noopener">打开 / 下载 SVG</a>
+            <span>FIG-03 · 故障诊断地图</span>
+            <a href="svg/03-fault-diagnosis.svg" target="_blank" rel="noopener">导出 SVG</a>
           </div>
-          <div class="figure-wrap">
-            <img src="svg/03-fault-diagnosis.svg" alt="故障诊断地图：现象、五步排查与常用手段" />
+          <div class="figure-wrap figure-zoom" tabindex="0" role="button" aria-label="点击放大预览：故障诊断">
+            <img src="svg/03-fault-diagnosis.svg" alt="故障诊断地图：现象、五步排查与常用手段" draggable="false" />
           </div>
         </div>
         <div class="grid-2">
           <article class="note prose">
-            <strong>五步不要跳</strong>
-            <p>发现问题：先看影响面和分级，安全事件立即切断工具与外发。定位范围：从网关、鉴权、运行时、决策、检索记忆到模型供应商逐层切开，避免全员同时猜。分析原因：用会话 ID、版本、检索片段、工具入参出参对照，一次只怀疑一个变量。解决问题：先降级、回滚、限流，再补知识、收紧停止条件、补评测。复盘总结：写清哪条边界被突破，并决定决策树要不要改。</p>
+            <strong>五步处置链路</strong>
+            <p>发现问题：评估影响面与分级，安全类事件立即切断工具与外发。定位范围：由网关、鉴权、运行时、决策、检索记忆至模型供应商逐层切分。分析原因：以会话 ID、版本、检索片段、工具入参出参对照，单变量假设。解决问题：先降级、回滚、限流，再补知识、收紧停止条件、扩充评测。复盘总结：记录被突破的边界，并回写决策树与发布门禁。</p>
           </article>
-          <article class="say prose">
-            <strong>建议口述</strong>
-            <p>Agent 故障和普通接口故障不一样，它可能“看起来成功、业务上是错的”。所以诊断地图把正确性、权限、成本和幻觉放进同一套分级。没有会话编号和模型版本，我们不开始分析。恢复动作优先于漂亮的根因故事，根因必须能变成下一次的发布门禁。</p>
+          <article class="note prose">
+            <strong>Agent 故障特征</strong>
+            <p>Agent 故障常表现为<span class="warn">「调用成功、业务错误」</span>。诊断地图将正确性、权限、成本与幻觉纳入统一分级。<span class="key">无会话编号与模型版本不启动根因分析。</span>恢复动作优先于叙事性根因；根因必须可转化为下一版发布门禁。</p>
           </article>
         </div>
       </section>
 
-      <section id="boundary">
-        <h2>四、十大边界：把“模型都很能”收成可执行的否决项</h2>
-        <p class="kicker">当讨论跑偏到功能清单时，用这张图把话题拉回责任。每一条边界都对应五层中的执行位置。</p>
+      <section class="reveal" id="boundary">
+        <span class="section-tag">04 · BOUNDARY</span>
+        <h2>十大架构边界</h2>
+        <p class="kicker">将「模型能力」收束为可执行的否决项与责任锚点。每条边界对应五层中的具体执行位置。</p>
         <div class="card">
           <div class="figure-bar">
-            <span>图 4 · 十大边界</span>
-            <a href="svg/04-ten-boundaries.svg" target="_blank" rel="noopener">打开 / 下载 SVG</a>
+            <span>FIG-04 · 十大边界</span>
+            <a href="svg/04-ten-boundaries.svg" target="_blank" rel="noopener">导出 SVG</a>
           </div>
-          <div class="figure-wrap">
-            <img src="svg/04-ten-boundaries.svg" alt="AI 应用架构十大边界，以及与五层架构、三条系统流的对应关系" />
+          <div class="figure-wrap figure-zoom" tabindex="0" role="button" aria-label="点击放大预览：十大边界">
+            <img src="svg/04-ten-boundaries.svg" alt="AI 应用架构十大边界，以及与五层架构、三条系统流的对应关系" draggable="false" />
           </div>
         </div>
         <div class="prose">
-          <p>十条边界可以收成三句追问。第一，这件事越过了哪一条边界：是模型在替人做决定，是知识超出授权范围，是工具没有失败语义，还是高影响动作没有人确认。第二，这条边界在五层的哪一层执行：提示词版本在模型层，权限过滤在知识层，停止和预算在运行层，验收阈值在进化层。第三，谁验收、谁能停止、谁负责任。答不上来的能力，不放进本季度交付。</p>
-          <p>特别需要强调责任边界和数据边界。生成内容可以辅助起草，不能替代制度、审批和最终签字。训练数据、索引、日志和导出必须分开；敏感内容默认可以不进模型。运行边界则要求超时、重试、并发和成本有上限，系统失控时必须存在一个能按下的停止开关。</p>
+          <p>三条追问统一评审口径：<span class="key">是否越过边界</span>——替人决策、超授权知识、工具无失败语义、高影响动作无人确认；<span class="key">边界在五层哪一层执行</span>——提示词版本在模型层、权限在知识层、停止与预算在运行层、验收阈值在进化层；<span class="key">谁验收、谁可停止、谁担责</span>。答不清的能力不纳入当期交付范围。</p>
+          <p>责任边界与数据边界需显性化：生成内容可辅助起草，不替代制度、审批与最终签字。训练数据、索引、日志与导出隔离；敏感内容默认可不进模型。运行边界要求超时、重试、并发与成本有上限，并保留可操作的紧急停止开关。</p>
         </div>
       </section>
 
-      <section id="decision">
-        <h2>五、决策树：技术选型从业务问题出发</h2>
-        <p class="kicker">这张图用来挡住“一律上多智能体”。路径可以叠加，但不能跳过更简单的方案。</p>
+      <section class="reveal" id="decision">
+        <span class="section-tag">05 · DECISION</span>
+        <h2>架构决策树</h2>
+        <p class="kicker">技术选型由业务问题出发；路径可组合，但不得跳过更简方案。</p>
         <div class="card">
           <div class="figure-bar">
-            <span>图 5 · 架构决策树</span>
-            <a href="svg/05-decision-tree.svg" target="_blank" rel="noopener">打开 / 下载 SVG</a>
+            <span>FIG-05 · 架构决策树</span>
+            <a href="svg/05-decision-tree.svg" target="_blank" rel="noopener">导出 SVG</a>
           </div>
-          <div class="figure-wrap">
-            <img src="svg/05-decision-tree.svg" alt="从业务目标出发的 AI 应用架构决策树" />
+          <div class="figure-wrap figure-zoom" tabindex="0" role="button" aria-label="点击放大预览：决策树">
+            <img src="svg/05-decision-tree.svg" alt="从业务目标出发的 AI 应用架构决策树" draggable="false" />
           </div>
         </div>
-        <div class="grid-2">
-          <article class="note prose">
-            <strong>判断顺序</strong>
-            <ul>
-              <li>流程固定且要审计：用 Workflow，不要用自由规划。</li>
-              <li>答案依赖企业知识或外部事实：加 RAG，并返回引用。</li>
-              <li>信息必须跨会话保留：加 Memory，且允许用户删除。</li>
-              <li>路径不固定但目标明确：才引入单 Agent，并写清停止条件。</li>
-              <li>多个角色真正独立、需要交接仲裁：才使用 Multi-Agent。</li>
-              <li>要定时、重试、排队和观测：无论上面选了什么，都要有 Runtime。</li>
-            </ul>
-          </article>
-          <article class="say prose">
-            <strong>建议口述</strong>
-            <p>决策树不是六选一。一个场景可以同时需要流程、检索和运行时。它禁止的是跳步：还没证明流程不够，就上多智能体；还没划清数据和权限，就让模型直接调用写接口。若动作不可逆，再灵活的路径也退回“流程 + 人工确认”。最终交付物不是一张概念图，而是一张场景架构卡：目标、路径、边界、运行责任人和验收指标。</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="script">
-        <h2>六、十分钟讲稿与收束</h2>
         <div class="grid-2">
           <article class="note">
-            <h3>时间分配</h3>
-            <dl class="agenda">
-              <dt>0:00</dt><dd>用价值总览说明：我们交付的是业务结果，不是对话次数。</dd>
-              <dt>1:30</dt><dd>用方法论讲清五层、两侧横切、三条流和一个闭环。</dd>
-              <dt>4:30</dt><dd>用十大边界回答“模型的权力停在哪里”。</dd>
-              <dt>6:30</dt><dd>用决策树说明本阶段为什么这样选型。</dd>
-              <dt>8:15</dt><dd>用诊断地图说明上线后谁来恢复、如何复盘。</dd>
-              <dt>9:30</dt><dd>收束到下一阶段要补的评测、权限和运行责任人。</dd>
-            </dl>
+            <strong>判断顺序</strong>
+            <ul>
+              <li><span class="key">流程固定且需审计</span>：<span class="term">Workflow</span>，避免自由规划。</li>
+              <li><span class="key">答案依赖企业知识或外部事实</span>：<span class="term">RAG</span>，并返回引用。</li>
+              <li><span class="key">信息须跨会话保留</span>：<span class="term">Memory</span>，且支持用户删除。</li>
+              <li><span class="key">路径不固定、目标明确</span>：单 <span class="term">Agent</span>，明确停止条件。</li>
+              <li><span class="key">多角色独立协作与仲裁</span>：<span class="term">Multi-Agent</span>。</li>
+              <li><span class="key">定时、重试、排队与观测</span>：任意路径均须 <span class="term">Runtime</span>。</li>
+            </ul>
           </article>
-          <article class="say prose">
-            <strong>收束可以这样说</strong>
-            <p>架构设计的完成标准不是图的层数，而是四个问题都有负责人：用户任务是否被完成，依据是否来自授权知识，高风险动作是否有人确认，系统变差时是否能在一条闭环里被发现并回滚。五张图是同一套口径的五个切面，后续评审、排期和故障复盘都沿用这套词，避免每个项目重新发明一层架构。</p>
+          <article class="note prose">
+            <strong>组合与禁忌</strong>
+            <p>决策树非互斥六选一；场景可同时需要流程、检索与运行时。<span class="warn">禁止跳步</span>：未验证流程不足即上多智能体；未划清数据与权限即直连写接口。不可逆动作一律退回「流程 + 人工确认」。</p>
+            <p>交付物为<span class="key">场景架构卡</span>：目标、路径、边界、运行责任人、验收指标——而非孤立概念图。</p>
           </article>
         </div>
-        <h3>落地检查，会后可直接当行动项</h3>
+      </section>
+
+      <section class="reveal" id="governance">
+        <span class="section-tag">06 · GOVERNANCE</span>
+        <h2>落地治理与验收标准</h2>
+        <p class="kicker">架构完成的标志，是四个问题均有明确负责人与可度量结果。</p>
+        <div class="closing">
+          <h2>完成标准</h2>
+          <p><span class="hl">用户任务是否被完成</span>；<span class="hl">依据是否来自授权知识</span>；<span class="hl">高风险动作是否有人工确认</span>；<span class="hl">系统劣化时是否能在单条闭环内被发现并回滚</span>。五张架构视图为同一口径的五个切面——后续评审、排期与故障复盘沿用同一套词汇，避免项目间重复定义架构层。</p>
+        </div>
+        <h3>分层检查项</h3>
         <div class="grid-3">
-          <article class="check"><strong>设计</strong><ul><li>每个场景有一张架构卡，标明 Workflow / RAG / Memory / Agent 的取舍。</li><li>十条边界里，至少写明工具、权限、数据和责任四条如何执行。</li></ul></article>
-          <article class="check"><strong>工程</strong><ul><li>会话 ID、模型版本、提示词版本、检索片段可追溯。</li><li>超时、预算、停止、降级和人工接管有开关。</li></ul></article>
-          <article class="check"><strong>运营</strong><ul><li>上线门禁包含评测阈值，而不是只看演示。</li><li>故障复盘能指回某一条边界，并补进评测集。</li></ul></article>
+          <article class="check"><strong>设计</strong><ul><li>每场景具备架构卡，标明 Workflow / RAG / Memory / Agent 取舍。</li><li>十条边界中至少落实工具、权限、数据、责任四条执行方式。</li></ul></article>
+          <article class="check"><strong>工程</strong><ul><li>会话 ID、模型版本、提示词版本、检索片段全链路可追溯。</li><li>超时、预算、停止、降级与人工接管具备可操作开关。</li></ul></article>
+          <article class="check"><strong>运营</strong><ul><li>上线门禁含评测阈值，不仅依赖演示通过。</li><li>故障复盘可映射至具体边界，并回补评测集。</li></ul></article>
         </div>
       </section>
     </main>
   </div>
+
+  <div class="figure-lightbox" id="figure-lightbox" hidden>
+    <div class="figure-lightbox__backdrop" data-lightbox-close tabindex="-1"></div>
+    <div class="figure-lightbox__panel" role="dialog" aria-modal="true" aria-labelledby="figure-lightbox-title">
+      <header class="figure-lightbox__bar">
+        <p class="figure-lightbox__title" id="figure-lightbox-title"></p>
+        <div class="figure-lightbox__tools">
+          <button type="button" class="figure-lightbox__btn" data-zoom="out" aria-label="缩小">−</button>
+          <button type="button" class="figure-lightbox__btn figure-lightbox__btn--label" data-zoom="reset" aria-label="适应屏幕">适应</button>
+          <button type="button" class="figure-lightbox__btn" data-zoom="in" aria-label="放大">+</button>
+          <button type="button" class="figure-lightbox__btn figure-lightbox__btn--ghost" data-zoom="recenter" aria-label="居中视图">居中</button>
+          <button type="button" class="figure-lightbox__btn figure-lightbox__btn--close" data-lightbox-close aria-label="关闭预览">关闭</button>
+        </div>
+      </header>
+      <div class="figure-lightbox__stage" id="figure-lightbox-stage">
+        <div class="figure-lightbox__canvas" id="figure-lightbox-canvas">
+          <img class="figure-lightbox__img" id="figure-lightbox-img" alt="" draggable="false" />
+        </div>
+      </div>
+      <p class="figure-lightbox__hint">滚轮以指针位置缩放 · 拖拽平移 · 双击放大/还原 · Esc 关闭</p>
+    </div>
+  </div>
+
   <script src="js/report.js"></script>
 </body>
 </html>
